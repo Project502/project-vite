@@ -1,0 +1,51 @@
+/* Parent container to hold both .info and .image */
+.home-page {
+    display: flex;    /* Place items side by side */
+    justify-content: space-between;
+    align-items: center;    /* Vertically center them */
+    max-width: 1200px;    /* Control overall width */
+    margin: 0 auto;    /* Center the container */
+    padding: 6rem;    /* Some space around */
+}
+
+/* Left section */
+.info {
+    flex: 1;    /* Allow it to expand to fill space */
+    margin-right: 2rem;    /* Space between info and image */
+}
+
+/* Right section */
+.image {
+    flex: 1;    /* Center an actual image if you put one here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* (Optional) If you want the text to align left */
+.info h1,
+.info p,
+.info ul,
+.info button {
+    text-align: left;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .home-page {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Stack vertically on mobile */
+    }
+
+    .info,
+    .image {
+        margin-right: 0;
+        /* Remove side margin on smaller screens */
+        margin-bottom: 1rem;
+        /* Add spacing between stacked sections */
+        width: 100%;
+        /* Full width on mobile */
+    }
+}
